@@ -1,8 +1,8 @@
 ﻿using ProjectSafeWayz.ViewModels;
-using SafeWayzLibrary.Models;
+using ProjectSafeWayz.Models;
 using System.Linq;
 using Xamarin.Forms;
-using SafeWayzLibrary.Enums;
+using ProjectSafeWayz.Enums;
 
 namespace ProjectSafeWayz.Views
 {
@@ -34,7 +34,7 @@ namespace ProjectSafeWayz.Views
         private async void IncidentsView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var details = e.Item as TimelineModel;
-            await Navigation.PushModalAsync(new PostDetails(details.IncidentDescription,details.location, details.IncidentType,details.Area, details.Image, details.CreatedBy, details.TimeOfIncident));
+            await Navigation.PushModalAsync(new PostDetails(details.IncidentDescription,details.Location, details.IncidentType,details.Area, details.Image, details.CreatedBy, details.TimeOfIncident));
 
         }
     }

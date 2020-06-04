@@ -2,7 +2,7 @@
 using Prism.Mvvm;
 using Prism.Navigation;
 using Prism.Services;
-using SafeWayzLibrary.Models;
+using ProjectSafeWayz.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

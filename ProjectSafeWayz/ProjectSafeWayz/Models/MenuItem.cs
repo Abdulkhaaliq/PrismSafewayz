@@ -1,9 +1,9 @@
-﻿using SafeWayzLibrary.Enums;
+﻿using ProjectSafeWayz.Enums;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace SafeWayzLibrary.Models
+namespace ProjectSafeWayz.Models
 {
     public class MenuItem
     {

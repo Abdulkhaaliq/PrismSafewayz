@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json;
-using SafeWayzLibrary.Models;
+using ProjectSafeWayz.Models;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -36,10 +36,10 @@ namespace ProjectSafeWayz.Helpers
 
             TimelineModel timelineModel = new TimelineModel()
             {
-                Area = incident.Area,
+                //Area = incident.Area,
                // Location = incident.Location,
-                IncidentType = incident.IncidentType,
-                IncidentDescription = incident.IncidentDescription,
+              //  IncidentType = incident.IncidentType,
+               // IncidentDescription = incident.IncidentDescription,
             };
 
             return timelineModel;

@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectSafeWayz", "ProjectSafeWayz\ProjectSafeWayz.csproj", "{5CC49D1C-C316-4685-BD44-6500B8399E50}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectSafeWayz", "ProjectSafeWayz\ProjectSafeWayz.csproj", "{5CC49D1C-C316-4685-BD44-6500B8399E50}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectSafeWayz.Android", "ProjectSafeWayz.Android\ProjectSafeWayz.Android.csproj", "{545115F7-4E77-4562-9E85-F52498DB9F52}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectSafeWayz.iOS", "ProjectSafeWayz.iOS\ProjectSafeWayz.iOS.csproj", "{241ED25F-6C8B-4445-A71E-C90F9EE1F98A}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SafeWayzLibrary", "..\..\Github\SafeWayzAppProject\SafeWayzLibrary\SafeWayzLibrary.csproj", "{FB635E28-16ED-4193-8F53-FBE020C6A052}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -107,30 +105,6 @@ Global
 		{241ED25F-6C8B-4445-A71E-C90F9EE1F98A}.Release|iPhone.Build.0 = Release|iPhone
 		{241ED25F-6C8B-4445-A71E-C90F9EE1F98A}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{241ED25F-6C8B-4445-A71E-C90F9EE1F98A}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
-		{FB635E28-16ED-4193-8F53-FBE020C6A052}.Ad-Hoc|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB635E28-16ED-4193-8F53-FBE020C6A052}.Ad-Hoc|Any CPU.Build.0 = Debug|Any CPU
-		{FB635E28-16ED-4193-8F53-FBE020C6A052}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
-		{FB635E28-16ED-4193-8F53-FBE020C6A052}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
-		{FB635E28-16ED-4193-8F53-FBE020C6A052}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{FB635E28-16ED-4193-8F53-FBE020C6A052}.Ad-Hoc|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{FB635E28-16ED-4193-8F53-FBE020C6A052}.AppStore|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB635E28-16ED-4193-8F53-FBE020C6A052}.AppStore|Any CPU.Build.0 = Debug|Any CPU
-		{FB635E28-16ED-4193-8F53-FBE020C6A052}.AppStore|iPhone.ActiveCfg = Debug|Any CPU
-		{FB635E28-16ED-4193-8F53-FBE020C6A052}.AppStore|iPhone.Build.0 = Debug|Any CPU
-		{FB635E28-16ED-4193-8F53-FBE020C6A052}.AppStore|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{FB635E28-16ED-4193-8F53-FBE020C6A052}.AppStore|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{FB635E28-16ED-4193-8F53-FBE020C6A052}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB635E28-16ED-4193-8F53-FBE020C6A052}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FB635E28-16ED-4193-8F53-FBE020C6A052}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{FB635E28-16ED-4193-8F53-FBE020C6A052}.Debug|iPhone.Build.0 = Debug|Any CPU
-		{FB635E28-16ED-4193-8F53-FBE020C6A052}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{FB635E28-16ED-4193-8F53-FBE020C6A052}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{FB635E28-16ED-4193-8F53-FBE020C6A052}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FB635E28-16ED-4193-8F53-FBE020C6A052}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FB635E28-16ED-4193-8F53-FBE020C6A052}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{FB635E28-16ED-4193-8F53-FBE020C6A052}.Release|iPhone.Build.0 = Release|Any CPU
-		{FB635E28-16ED-4193-8F53-FBE020C6A052}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{FB635E28-16ED-4193-8F53-FBE020C6A052}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

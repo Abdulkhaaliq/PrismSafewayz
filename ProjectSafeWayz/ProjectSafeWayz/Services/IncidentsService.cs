@@ -1,6 +1,6 @@
 ﻿using ProjectSafeWayz.Services.Interfaces;
-using SafeWayzLibrary.Enums;
-using SafeWayzLibrary.Models;
+using ProjectSafeWayz.Enums;
+using ProjectSafeWayz.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -47,7 +47,7 @@ namespace ProjectSafeWayz.Services
                 TimeOfIncident = DateTime.Now,
                 Image = null,
                 CreatedBy = "Robert",
-                location = "1 Lilydale Road Lotus River"
+                Location = "1 Lilydale Road Lotus River"
             };
             _allReports.Add(report);
 
@@ -59,7 +59,7 @@ namespace ProjectSafeWayz.Services
                 TimeOfIncident = DateTime.Now,
                 Image = null,
                 CreatedBy = "Anonymous",
-                location = "42 Milford Rd, Plumstead"
+                Location = "42 Milford Rd, Plumstead"
             };
             _allReports.Add(report);
 
@@ -71,7 +71,7 @@ namespace ProjectSafeWayz.Services
                 TimeOfIncident = DateTime.Now,
                 Image = null,
                 CreatedBy = "Anonymous",
-                location = "41 Thames Walk, Manenberg"
+                Location = "41 Thames Walk, Manenberg"
             };
             _allReports.Add(report);
 
@@ -83,7 +83,7 @@ namespace ProjectSafeWayz.Services
                 TimeOfIncident = DateTime.Now,
                 Image = null,
                 CreatedBy = "Anonymous",
-                location = "2 Brisbane Rd, Wynberg"
+                Location = "2 Brisbane Rd, Wynberg"
             };
             _allReports.Add(report);
 
@@ -95,7 +95,7 @@ namespace ProjectSafeWayz.Services
                 TimeOfIncident = DateTime.Now,
                 Image = null,
                 CreatedBy = "Anonymous",
-                location = "15 Penrith Rd, Kenilworth"
+                Location = "15 Penrith Rd, Kenilworth"
             };
             _allReports.Add(report);
         }

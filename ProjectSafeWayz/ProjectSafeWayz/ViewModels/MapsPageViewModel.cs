@@ -4,7 +4,6 @@ using Prism.Mvvm;
 using Prism.Navigation;
 using ProjectSafeWayz.Models;
 using ProjectSafeWayz.Services.Interfaces;
-using SafeWayzLibrary.Models;
 using System;
 using System.Collections;
 using System.Collections.Generic;

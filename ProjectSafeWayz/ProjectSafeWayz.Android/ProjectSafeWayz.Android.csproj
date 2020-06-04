@@ -106,10 +106,6 @@
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Github\SafeWayzAppProject\SafeWayzLibrary\SafeWayzLibrary.csproj">
-      <Project>{fb635e28-16ed-4193-8f53-fbe020c6a052}</Project>
-      <Name>SafeWayzLibrary</Name>
-    </ProjectReference>
     <ProjectReference Include="..\ProjectSafeWayz\ProjectSafeWayz.csproj">
       <Project>{A682884C-CB44-4A89-B752-27BB634E0ABE}</Project>
       <Name>ProjectSafeWayz</Name>

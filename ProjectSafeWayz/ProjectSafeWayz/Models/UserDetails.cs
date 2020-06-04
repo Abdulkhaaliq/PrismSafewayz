@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SafeWayzLibrary.Models
+namespace ProjectSafeWayz.Models
 {
     public class UserDetails
     {

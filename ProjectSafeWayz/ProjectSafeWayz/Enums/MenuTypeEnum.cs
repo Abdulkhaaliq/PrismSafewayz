@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SafeWayzLibrary.Enums
+namespace ProjectSafeWayz.Enums
 {
     public enum MenuTypeEnum
     {
