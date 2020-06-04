@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             xmlns:prism="http://prismlibrary.com" 
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="ProjectSafeWayz.Views.MapsPage"
+             Title="{Binding Title}"
+             >
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Explore"
+                     Command="{Binding ExploreCommand}"/>
+        
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <Grid>
+
+            <maps:Map x:Name="map"
+                 
+                      IsShowingUser="True">
+            </maps:Map>
+
+
+            <Button Text="View Timeline"
+                   Margin="20"
+                   Command="{Binding NavigateCommand}"
+                   x:Name="chooseLocationButton"
+                   BackgroundColor="Gray"
+                    TextColor="White"
+             
+                   FontSize="17"
+                    CornerRadius="20"
+                    HeightRequest="40"
+                   VerticalOptions="Start"
+                   HorizontalOptions="Start"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

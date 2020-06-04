@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com" xmlns:converters="clr-namespace:ProjectSafeWayz.Converters"   
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="ProjectSafeWayz.Views.PostDetails"
+             Title="{Binding Title}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:TextToColorConverter x:Key="TextToColorConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+        <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout HeightRequest="210">
+                    <maps:Map x:Name="map"
+                         HasZoomEnabled="True"
+                               IsVisible="true">
+                    </maps:Map>
+                </StackLayout>
+                <StackLayout>
+                    <Grid>
+                        <Label Text="Location" FontSize="Large" TextColor="Green"/>
+                        <Label x:Name="MyTime" FontSize="Medium" HorizontalTextAlignment="End" TextColor="Black"/>
+                    </Grid>
+                    <Label x:Name="MyIncidentType"/>
+                    <Label x:Name="MyLocation"/>
+                    <Grid>
+                        <Label Text="Description" FontSize="Large" TextColor="Green"/>
+                        <Label x:Name="MyArea"  FontSize="Medium" HorizontalTextAlignment="End"/>
+                       
+                    </Grid>
+                    <Label x:Name="MyIncidentDescription"/>
+                    <Grid>
+                        <Label Text="Reported by:" FontSize="Medium" TextColor="Green"/>
+                        <Label x:Name="User" HorizontalTextAlignment="End" FontSize="Medium" TextColor="Black"/>
+                    </Grid>
+
+                </StackLayout>
+                        <Frame BorderColor="Black" HeightRequest="50" Margin="20" CornerRadius="20">
+                <StackLayout BackgroundColor="White">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="2.5*"/>
+                        </Grid.ColumnDefinitions>
+                        <Entry 
+                 
+                                    x:Name="ChatEntry"
+                                    Placeholder="Type your comment"
+                                    BackgroundColor="Transparent"
+                                    FontSize="16"
+                                    PlaceholderColor="#b3b3b3"
+                                    Keyboard="Chat"
+                                    WidthRequest="40" MaxLength="30"
+                                    ClearButtonVisibility="WhileEditing"
+                   IsSpellCheckEnabled="True"/>
+                        <Button Text="send" TextColor="Green" BackgroundColor="Transparent" Clicked="Button_Clicked" Grid.Row="0" Grid.Column="1" />
+                    </Grid>
+                </StackLayout>
+            </Frame>
+                <Frame BorderColor="Black" BackgroundColor="Transparent" HeightRequest="300">
+                    <StackLayout>
+
+                        <Label Text="Comments:" HorizontalTextAlignment="Center" FontSize="Large" TextColor="DarkBlue"/>
+                        <Label x:Name="MyName"  TextColor="Black" FontSize="Body" Text="You will be displayed as Anonymous"/>
+                        <Label x:Name="MyLabel" TextColor="Black" FontSize="Body"/>
+
+                    </StackLayout>
+                </Frame>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+
+     

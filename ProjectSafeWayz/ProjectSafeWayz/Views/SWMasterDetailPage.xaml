@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:prism="http://prismlibrary.com" xmlns:converters="clr-namespace:ProjectSafeWayz.Converters"
+                  prism:ViewModelLocator.AutowireViewModel="True"
+                  x:Class="ProjectSafeWayz.Views.SWMasterDetailPage">
+
+    <MasterDetailPage.Master>
+        <NavigationPage Title="Menu">
+            <x:Arguments>
+                <ContentPage BackgroundColor="GreenYellow" Title="Menu">
+                    <ListView ItemsSource="{Binding MenuItems}" HasUnevenRows="True" SelectionMode="None">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="80"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="20"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="20"/>
+                                        </Grid.RowDefinitions>
+
+                                        <StackLayout>
+                                            <Label  Text="{Binding MenuItemName}"  Grid.Column="2" Grid.Row="2" FontSize="Medium" TextColor="Black"  HorizontalTextAlignment="Center" BackgroundColor="GreenYellow"/>
+                                        </StackLayout>
+
+                                    </Grid>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+
+                        <ListView.Behaviors>
+                            <prism:EventToCommandBehavior EventName="ItemTapped" 
+                                                      Command="{Binding NavigateCommand}"
+                                                      EventArgsConverter="{converters:ItemTappedEventArgsConverter}" />
+                        </ListView.Behaviors>
+                    </ListView>
+                </ContentPage>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Master>
+</MasterDetailPage>

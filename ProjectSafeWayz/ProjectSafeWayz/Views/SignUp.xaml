@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="ProjectSafeWayz.Views.SignUp"
+             Title="{Binding Title}">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="10" >
+                <Label HeightRequest="110"  
+                          HorizontalOptions="FillAndExpand" 
+                          Text="SafeWayZ" 
+                          TextColor="Black" 
+                          FontSize="40" 
+                          HorizontalTextAlignment="Center"
+                          VerticalTextAlignment="Center"/>
+
+                <StackLayout Orientation="Horizontal" Padding="20,40,20,0">
+                    <Entry HeightRequest="50" 
+                         HorizontalOptions="FillAndExpand"
+                         Placeholder="Name"
+                           Text="{Binding Person.Name}">
+
+                    </Entry>
+
+                    <Entry HeightRequest="50" 
+                                  HorizontalOptions="FillAndExpand"
+                                 Placeholder="Last Name"
+                           Text="{Binding Person.Surname}">
+
+                    </Entry>
+                </StackLayout>
+
+                <Entry  Margin="20,0,20,0" 
+                         HeightRequest="50" 
+                         Placeholder="User Name"
+                        Text="{Binding Person.UserName}">
+
+                </Entry>
+
+                <Entry  Margin="20,0,20,0" 
+                         HeightRequest="50" 
+                         Placeholder="Email"
+                        Text="{Binding Person.Email}">
+
+                </Entry>
+
+                <Entry Margin="20,0,20,0" 
+                        HeightRequest="50" IsPassword="true"
+                        Placeholder="Password"
+                       Text="{Binding Person.Password}">
+
+                </Entry>
+
+                <Button Margin="20,0,20,0" 
+                         HeightRequest="50" 
+                         TextColor="White" 
+                         Text="Register"  
+                         BackgroundColor="#0f961f"
+                         HorizontalOptions="FillAndExpand"
+                        Command="{Binding SignupCommand}"/>
+
+                <Button Margin="0,0,0,20" Text="I have an account" VerticalOptions="EndAndExpand"
+                        HorizontalOptions="Center" 
+                        TextColor="White"
+                        BackgroundColor="#0f961f"
+                        Command="{Binding NavigateCommand}"/>
+
+                <Label HorizontalOptions="Center"
+       VerticalOptions="CenterAndExpand">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Terms and conditions"
+                  TextColor="Blue"
+                  TextDecorations="Underline">
+                                <Span.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding UriCommand}"/>
+                                </Span.GestureRecognizers>
+                            </Span>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

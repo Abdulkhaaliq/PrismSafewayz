@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="ProjectSafeWayz.Views.SignIn"
+             Title="{Binding Title}">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="10" >
+                <Label HeightRequest="110"  
+                          HorizontalOptions="FillAndExpand" 
+                          Text="SafeWayZ" 
+                          TextColor="Black" 
+                          FontSize="40" 
+                          HorizontalTextAlignment="Center"
+                          VerticalTextAlignment="Center"/>
+
+                <Entry  Margin="20,100,20,0" 
+                         HeightRequest="50" 
+                         Placeholder="User Name"
+                        Text="{Binding Person.UserName}">
+
+                </Entry>
+
+                <Entry Margin="20,0,20,0" 
+                        HeightRequest="50" IsPassword="true"
+                        Placeholder="Password"
+                       Text="{Binding Person.Password}">
+
+                </Entry>
+
+                <Button Margin="20,0,20,0" 
+                         HeightRequest="50" 
+                         TextColor="White" 
+                         Text="Login"  
+                         BackgroundColor="#0f961f"
+                         HorizontalOptions="FillAndExpand"
+                        Command="{Binding LoginCommand}"/>
+
+                <Button Margin="0,0,0,20" Text="I don't have an account" VerticalOptions="EndAndExpand"
+                        HorizontalOptions="Center" 
+                        TextColor="White"
+                        BackgroundColor="#0f961f"
+                        Command="{Binding NavigateCommand}"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

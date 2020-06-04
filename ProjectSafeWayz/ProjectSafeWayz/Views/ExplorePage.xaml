@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="ProjectSafeWayz.Views.ExplorePage"
+             Title="Explore">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Filter Results" FontSize="Large" HorizontalTextAlignment="Center" TextColor="Blue"/>
+            <Grid Margin="20">
+                <Label Text="View Incidents" FontSize="Medium" TextColor="Black"/>
+                <Switch IsToggled="True">
+                    <Switch.Behaviors>
+                        <prism:EventToCommandBehavior EventName="Toggled"  Command="{Binding ToggleIsOwnedCommand}"/>
+                    </Switch.Behaviors>
+                </Switch>
+            </Grid>
+            <Grid Margin="20">
+                <Label Text="View Events" FontSize="Medium" TextColor="Black"/>
+                <Switch IsToggled="True">
+                    <Switch.Behaviors>
+                        <prism:EventToCommandBehavior EventName="Toggled"  Command="{Binding ToggleIsOwnedCommand}"/>
+                    </Switch.Behaviors>
+                </Switch>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
