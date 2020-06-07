@@ -17,15 +17,6 @@ namespace ProjectSafeWayz.ViewModels
             Title = "Settings";
         }
 
-        private DelegateCommand _notificationCommand;
-        public DelegateCommand NotificationCommand =>
-            _notificationCommand ?? (_notificationCommand = new DelegateCommand(ExecuteNotificationCommand));
-
-        async void ExecuteNotificationCommand()
-        {
-            await _navigationService.NavigateAsync("NotificationPage");
-        }
-
         private DelegateCommand _filterCommand;
         public DelegateCommand FilterCommand =>
             _filterCommand ?? (_filterCommand = new DelegateCommand(ExecuteFilterCommand));

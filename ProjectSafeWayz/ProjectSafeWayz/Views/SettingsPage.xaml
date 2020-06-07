@@ -7,7 +7,6 @@
     <ContentPage.Content>
           <StackLayout Margin="20,30">
             <Label Text="Settings" TextColor="Blue" FontSize="Large" HorizontalTextAlignment="Center"/>
-            <Button Text="Notifications" Command="{Binding NotificationCommand}" VerticalOptions="Center"/>
             <Button Text="Filter" Command="{Binding FilterCommand}" VerticalOptions="Center"/>
             <Button Text="Account" Command="{Binding AccountCommand}" VerticalOptions="Center"/>
         </StackLayout>

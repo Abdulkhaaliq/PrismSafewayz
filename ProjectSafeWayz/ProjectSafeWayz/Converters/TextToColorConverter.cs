@@ -12,29 +12,32 @@ namespace ProjectSafeWayz.Converters
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            string text = value as string;
-            if (text.Contains("Murder"))
+            var convertValue = (IncidentNames)value;
+
+            switch (convertValue)
             {
-                return Color.Red;
-            }
-            else if (text.Contains("Assault"))
-            {
-                return Color.Blue;
-            }
-            else if (text.Contains("Shooting"))
-            {
-                return Color.Green;
-            }
-            else if (text.Contains("Robbery"))
-            {
-                return Color.Orange;
-            }
-            else if (text.Contains("Accident"))
-            {
-                return Color.Purple;
+                case IncidentNames.Murder:
+
+                    return Color.Red;
+
+                case IncidentNames.Accident:
+
+                    return Color.Purple;
+
+                case IncidentNames.Shooting:
+
+                    return Color.Green;
+
+                case IncidentNames.Robbery:
+
+                    return Color.Orange;
+
+                case IncidentNames.Assault:
+
+                    return Color.Blue;
             }
 
-            return Color.Black;
+            return Color.Aquamarine;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

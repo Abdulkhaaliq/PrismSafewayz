@@ -2,9 +2,9 @@
 
 namespace ProjectSafeWayz.Views
 {
-    public partial class NotificationPage : ContentPage
+    public partial class PostIncidentPage : ContentPage
     {
-        public NotificationPage()
+        public PostIncidentPage()
         {
             InitializeComponent();
         }

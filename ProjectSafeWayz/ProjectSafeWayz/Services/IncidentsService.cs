@@ -15,7 +15,7 @@ namespace ProjectSafeWayz.Services
 
         public IncidentsService()
         {
-            CreateReports();
+            //CreateReports();
         }
 
       /* public async Task<TimelineModel> CircleOnMap()
@@ -35,7 +35,7 @@ namespace ProjectSafeWayz.Services
             return location;
         }*/
 
-        private void CreateReports()
+        /*private void CreateReports()
         {
             _allReports = new List<TimelineModel>();
 
@@ -98,6 +98,6 @@ namespace ProjectSafeWayz.Services
                 Location = "15 Penrith Rd, Kenilworth"
             };
             _allReports.Add(report);
-        }
+        }*/
     }
 }

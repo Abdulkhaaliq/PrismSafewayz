@@ -1,6 +1,7 @@
 ﻿using ProjectSafeWayz.ViewModels;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -63,17 +64,37 @@ namespace ProjectSafeWayz.Views
             myMap.Pins.Add(pin);
 
 
-            var response = await DisplayAlert("Location", address, "OK", "CANCEL");
+            var response = await DisplayAlert("Is this the location?", address, "OK", "CANCEL");
 
             if (response == true)
             {
 
-                await Navigation.PushAsync(new ReportPage(address));
+               // await Navigation.PushAsync(new ReportHerePage(address));
                 myMap.Pins.Clear();
             }
             else
             {
                 myMap.Pins.Clear();
+            }
+        }
+
+        private async void Button_Clicked_1(object sender, EventArgs e)
+        {
+            var pos = myMap.VisibleRegion.Center;
+            var placemarks = await Geocoding.GetPlacemarksAsync(pos.Latitude, pos.Longitude);
+
+            var placemark = placemarks?.FirstOrDefault();
+            if (placemark != null)
+            {
+                bool location = await DisplayAlert("This location?", $"{placemark.FeatureName} {placemark.Thoroughfare} {placemark.SubAdminArea}", "No", "Yes");
+                if(location == true)
+                {
+
+                }
+                else
+                {
+
+                }
             }
         }
     }

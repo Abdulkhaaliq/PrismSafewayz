@@ -17,9 +17,8 @@
         <ScrollView>
             <StackLayout>
                 <StackLayout HeightRequest="210">
-                    <maps:Map x:Name="map"
-                         HasZoomEnabled="True"
-                               IsVisible="true">
+                    <maps:Map x:Name="map">
+                       
                     </maps:Map>
                 </StackLayout>
                 <StackLayout>
@@ -27,17 +26,21 @@
                         <Label Text="Location" FontSize="Large" TextColor="Green"/>
                         <Label x:Name="MyTime" FontSize="Medium" HorizontalTextAlignment="End" TextColor="Black"/>
                     </Grid>
-                    <Label x:Name="MyIncidentType"/>
                     <Label x:Name="MyLocation"/>
                     <Grid>
                         <Label Text="Description" FontSize="Large" TextColor="Green"/>
-                        <Label x:Name="MyArea"  FontSize="Medium" HorizontalTextAlignment="End"/>
-                       
+                        <Label x:Name="MyIncidentType" FontSize="Medium" HorizontalTextAlignment="End" TextColor="Black"/>
+
                     </Grid>
                     <Label x:Name="MyIncidentDescription"/>
                     <Grid>
                         <Label Text="Reported by:" FontSize="Medium" TextColor="Green"/>
                         <Label x:Name="User" HorizontalTextAlignment="End" FontSize="Medium" TextColor="Black"/>
+                    </Grid>
+                    <Grid>
+                        <ImageButton Source="ReportPost.png" BackgroundColor="Transparent" Clicked="ImageButton_Clicked" />
+                        <ImageButton Source="LikePost.png" BackgroundColor="Transparent" Grid.Column="2" Clicked="ImageButton_Clicked_1"/>
+                        <Label x:Name="MyVote" Text="0"/>
                     </Grid>
 
                 </StackLayout>
@@ -65,7 +68,7 @@
                     </Grid>
                 </StackLayout>
             </Frame>
-                <Frame BorderColor="Black" BackgroundColor="Transparent" HeightRequest="300">
+                <Frame BorderColor="Black" BackgroundColor="Transparent" HeightRequest="300" Margin="10">
                     <StackLayout>
 
                         <Label Text="Comments:" HorizontalTextAlignment="Center" FontSize="Large" TextColor="DarkBlue"/>

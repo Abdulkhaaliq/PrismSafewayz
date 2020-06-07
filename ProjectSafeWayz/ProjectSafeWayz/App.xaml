@@ -1,14 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <prism:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:prism="http://prismlibrary.com"
+             xmlns:prism="clr-namespace:Prism.Unity;assembly=Prism.Unity.Forms"
              x:Class="ProjectSafeWayz.App">
   <Application.Resources>
-
         <Style TargetType="NavigationPage">
             <Setter Property="BarBackgroundColor" Value="#0f961f"/>
             <Setter Property="BarTextColor" Value="Color.White"/>
         </Style>
-
     </Application.Resources>
 </prism:PrismApplication>

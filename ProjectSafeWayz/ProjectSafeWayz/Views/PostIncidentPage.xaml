@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             x:Class="ProjectSafeWayz.Views.PostIncidentPage"
+             Title="{Binding Title}">
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Margin="20">
+                    <Grid>
+                        <Label Text="Time" TextColor="Black" FontSize="Medium"/>
+                        <Label Text="Date" TextColor="Black" FontSize="Medium" Grid.Column="2"/>
+                    </Grid>
+                </StackLayout>
+                <StackLayout Margin="20">
+                    <Grid>
+                        <Frame BorderColor="#0f961f" Grid.Column="0">
+                            <Label Text="Location"/>
+                        </Frame>
+                        <ImageButton Source="Pin.png" WidthRequest="30" BackgroundColor="Transparent" Command="{Binding SelectLocationCommand}"  Grid.Column="1"/>
+                    </Grid>
+                </StackLayout>
+                <StackLayout Margin="20">
+                    <Frame BorderColor="#0f961f" CornerRadius="40">
+                        <Picker Title="--Select Incident--" ItemsSource="{Binding IncidentTypes}" ItemDisplayBinding="{Binding IncidentNames}"/>
+                    </Frame>
+                </StackLayout>
+                <StackLayout Margin="20">
+                    <Grid>
+                        <Frame BorderColor="#0f961f"  HeightRequest="140">
+                   
+                                <Editor MaxLength="80" Placeholder="Desciption of a 80 words here"/>
+                        </Frame>
+                    </Grid>
+                </StackLayout>
+                <StackLayout Margin="10">
+                    <Grid>
+                    <Label Text="Would you like you add a photo?" Grid.Column="0"/>
+                    <Button Text="Add image" TextColor="#0f961f" BackgroundColor="Transparent" HeightRequest="20" Grid.Column="1" HorizontalOptions="End"/>
+                    </Grid>
+                </StackLayout>
+                <StackLayout Margin="10">
+                    <Grid>
+                        <Label Text="Would you like to be anonymous??" Grid.Column="0"/>
+                        <CheckBox Grid.Column="1" HorizontalOptions="End" Color="#0f961f"/>
+                    </Grid>
+                </StackLayout>
+                <StackLayout Margin="20">
+                    <Button Text="Report Incident" CornerRadius="30" BackgroundColor="Transparent" TextColor="#0f961f"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -59,12 +59,10 @@ namespace ProjectSafeWayz
             containerRegistry.RegisterForNavigation<SignUp, SignUpViewModel>();
             containerRegistry.RegisterForNavigation<SWMasterDetailPage, SWMasterDetailPageViewModel>();
             containerRegistry.RegisterForNavigation<SettingsPage, SettingsPageViewModel>();
-            containerRegistry.RegisterForNavigation<NotificationPage, NotificationPageViewModel>();
             containerRegistry.RegisterForNavigation<AccountPage, AccountPageViewModel>();
             containerRegistry.RegisterForNavigation<MapsPage, MapsPageViewModel>();
             containerRegistry.RegisterForNavigation<ExplorePage, ExplorePageViewModel>();
-            containerRegistry.RegisterForNavigation<ReportPage, ReportPageViewModel>();
-            containerRegistry.RegisterForNavigation<Report, ReportViewModel>();
+            containerRegistry.RegisterForNavigation<PostIncidentPage, PostIncidentPageViewModel>();
         }
     }
 }

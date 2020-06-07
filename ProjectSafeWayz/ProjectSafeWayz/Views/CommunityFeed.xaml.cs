@@ -3,6 +3,7 @@ using ProjectSafeWayz.Models;
 using System.Linq;
 using Xamarin.Forms;
 using ProjectSafeWayz.Enums;
+using ProjectSafeWayz.Converters;
 
 namespace ProjectSafeWayz.Views
 {
@@ -25,7 +26,7 @@ namespace ProjectSafeWayz.Views
             }
             else
             {
-                IncidentsView.ItemsSource = keyword.Incidents.Where(i => i.IncidentType.ToLower().Contains(e.NewTextValue.ToLower()));
+                IncidentsView.ItemsSource = keyword.Incidents.Where(i => i.IncidentType.GetDescription().Contains(e.NewTextValue.ToLower()));
 
                 IncidentsView.EndRefresh();
             }
@@ -34,7 +35,7 @@ namespace ProjectSafeWayz.Views
         private async void IncidentsView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var details = e.Item as TimelineModel;
-            await Navigation.PushModalAsync(new PostDetails(details.IncidentDescription,details.Location, details.IncidentType,details.Area, details.Image, details.CreatedBy, details.TimeOfIncident));
+            await Navigation.PushModalAsync(new PostDetails(details.IncidentDescription,details.Latitude, details.Longitude, details.IncidentType.GetDescription(), details.Image, details.CreatedBy, details.TimeOfIncident));
 
         }
     }

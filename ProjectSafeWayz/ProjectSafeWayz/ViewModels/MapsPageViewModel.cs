@@ -18,9 +18,9 @@ namespace ProjectSafeWayz.ViewModels
 
         public Map Map { get; set; }
 
-        readonly ObservableCollection<Location> _locations;
+      //  readonly ObservableCollection<Location> _locations;
 
-        public IEnumerable Locations => _locations;
+     //   public IEnumerable Locations => _locations;
 
         public INavigationService _navigationService;
         public MapsPageViewModel(INavigationService navigationService, IMappingService mapping)
