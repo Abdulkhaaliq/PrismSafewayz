@@ -10,19 +10,6 @@ namespace ProjectSafeWayz.Behavoiurs
 {
     public class MapComponent : Map
     {
-        public Position Center { get; set; }
-        public MapComponent()
-        {
-            PropertyChanged += (object sender, PropertyChangedEventArgs e) =>
-            {
-                MapComponent map = sender as MapComponent;
-                if (map.VisibleRegion != null)
-                {
-                    Center = map.VisibleRegion.Center;
-                }
-            };
-        }
-
-    
+        public Circle CustomCircles { get; set; }
     }
 }

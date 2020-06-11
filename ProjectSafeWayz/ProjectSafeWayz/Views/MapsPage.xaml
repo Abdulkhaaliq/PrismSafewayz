@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
-             xmlns:prism="http://prismlibrary.com" 
+             xmlns:prism="http://prismlibrary.com" xmlns:controls="clr-namespace:ProjectSafeWayz.Behavoiurs"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="ProjectSafeWayz.Views.MapsPage"
              Title="{Binding Title}"
@@ -17,30 +17,9 @@
     <ContentPage.Content>
         <Grid>
 
-            <maps:Map x:Name="map"
-                 
-                      IsShowingUser="True">
-                <maps:Map.MapElements>
-                    <maps:Circle StrokeColor="Purple"
-                           StrokeWidth="4"
-                           FillColor="#88FFC0CB">
-                        <maps:Circle.Center>
-                            <maps:Position>
-                                <x:Arguments>
-                                    <x:Double>-34.040055</x:Double>
-                                    <x:Double>18.510534</x:Double>
-                                </x:Arguments>
-                            </maps:Position>
-                        </maps:Circle.Center>
-                        <maps:Circle.Radius>
-                            <maps:Distance>
-                                <x:Arguments>
-                                    <x:Double>50</x:Double>
-                                </x:Arguments>
-                            </maps:Distance>
-                        </maps:Circle.Radius>
-                    </maps:Circle>
-                </maps:Map.MapElements>
+            <maps:Map x:Name="myMap" IsShowingUser="True"
+                ItemsSource="{Binding Locations}" >
+               
             </maps:Map>
 
 

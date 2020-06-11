@@ -34,7 +34,7 @@ namespace ProjectSafeWayz.Views
 
                 if (location != null)
                 {
-                    map.MoveToRegion(MapSpan.FromCenterAndRadius(
+                    myMap.MoveToRegion(MapSpan.FromCenterAndRadius(
                         new Position(location.Latitude, location.Longitude), Distance.FromKilometers(0.3)));
                 }
 

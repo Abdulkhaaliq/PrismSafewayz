@@ -27,9 +27,9 @@ namespace ProjectSafeWayz.Views
             lon = longitude;
             OnAppearing();
 
-            var customMap = new MapComponent();
-
-            myMap.MoveToRegion(MapSpan.FromCenterAndRadius(
+           
+            
+        myMap.MoveToRegion(MapSpan.FromCenterAndRadius(
                        new Position(lat, lon), Distance.FromMeters(0.5)));
 
             Circle circle = new Circle
@@ -41,7 +41,7 @@ namespace ProjectSafeWayz.Views
                 FillColor = Color.Transparent
             };
             myMap.MapElements.Add(circle);
-    
+
 
         }
         protected override void OnAppearing()
