@@ -6,33 +6,40 @@
              x:Class="ProjectSafeWayz.Views.PostIncidentPage"
              Title="{Binding Title}">
 
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="Cancel.png" Command="{Binding CancelCommand}"/>
+    </ContentPage.ToolbarItems>
+    
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
                 <StackLayout Margin="20">
+                    <Label Text="Report card" TextColor="#0f961f" FontSize="Large" HorizontalTextAlignment="Center"/>
                     <Grid>
-                        <Label Text="Time" TextColor="Black" FontSize="Medium"/>
-                        <Label Text="Date" TextColor="Black" FontSize="Medium" Grid.Column="2"/>
+                        <Label Text="Reported at:" TextColor="Black" FontSize="Medium"/>
+                        <Label Text="{Binding Report.TimeOfIncident}" x:Name="myTime" TextColor="Black" FontSize="Medium" Grid.Column="2"/>
+                      
                     </Grid>
                 </StackLayout>
                 <StackLayout Margin="20">
                     <Grid>
                         <Frame BorderColor="#0f961f" Grid.Column="0">
-                            <Label Text="Location"/>
+                            <Label x:Name="mylocation" Text="{Binding Report.Location}"/>
                         </Frame>
-                        <ImageButton Source="Pin.png" WidthRequest="30" BackgroundColor="Transparent" Command="{Binding SelectLocationCommand}"  Grid.Column="1"/>
+              
                     </Grid>
                 </StackLayout>
                 <StackLayout Margin="20">
                     <Frame BorderColor="#0f961f" CornerRadius="40">
-                        <Picker Title="--Select Incident--" ItemsSource="{Binding IncidentTypes}" ItemDisplayBinding="{Binding IncidentNames}"/>
+                        <Picker Title="--Select Incident--" ItemsSource="{Binding IncidentTypes}" SelectedItem="{Binding SelectedIncidentType, Mode=TwoWay}"/>
                     </Frame>
                 </StackLayout>
                 <StackLayout Margin="20">
                     <Grid>
                         <Frame BorderColor="#0f961f"  HeightRequest="140">
                    
-                                <Editor MaxLength="80" Placeholder="Desciption of a 80 words here"/>
+                                <Editor MaxLength="80" Placeholder="Desciption of a 80 words here" Text="{Binding Report.IncidentDescription}"/>
                         </Frame>
                     </Grid>
                 </StackLayout>
@@ -43,13 +50,10 @@
                     </Grid>
                 </StackLayout>
                 <StackLayout Margin="10">
-                    <Grid>
-                        <Label Text="Would you like to be anonymous??" Grid.Column="0"/>
-                        <CheckBox Grid.Column="1" HorizontalOptions="End" Color="#0f961f"/>
-                    </Grid>
+                        <Label Text="You will be displayed as anonymous but your points score will apply to your post."/>
                 </StackLayout>
                 <StackLayout Margin="20">
-                    <Button Text="Report Incident" CornerRadius="30" BackgroundColor="Transparent" TextColor="#0f961f"/>
+                    <Button Text="Report Incident" Command="{Binding PostCommand}" CornerRadius="30" BackgroundColor="Transparent" TextColor="#0f961f"/>
                 </StackLayout>
             </StackLayout>
         </ScrollView>

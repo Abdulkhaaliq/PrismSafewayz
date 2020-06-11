@@ -26,7 +26,7 @@ namespace ProjectSafeWayz.Views
             }
             else
             {
-                IncidentsView.ItemsSource = keyword.Incidents.Where(i => i.IncidentType.GetDescription().Contains(e.NewTextValue.ToLower()));
+                IncidentsView.ItemsSource = keyword.Incidents.Where(i => i.Area.Contains(e.NewTextValue.ToLower()));
 
                 IncidentsView.EndRefresh();
             }

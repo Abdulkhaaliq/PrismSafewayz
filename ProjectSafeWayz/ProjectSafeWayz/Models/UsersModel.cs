@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ProjectSafeWayz.Models
 {
-    public class UserDetails
+    public class UsersModel
     {
         public string UserName { get; set; }
         public int Id { get; set; }

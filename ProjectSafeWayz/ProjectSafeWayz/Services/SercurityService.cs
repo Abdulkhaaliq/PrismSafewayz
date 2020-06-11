@@ -21,7 +21,7 @@ namespace ProjectSafeWayz.Services
 
         public IPageDialogService _pageDialogService;
 
-        public UserDetails userDetails;
+        public UsersModel userDetails;
         public bool LoggedIn { get; set; }
 
         public SercurityService(IEventAggregator eventAggregator)

@@ -18,8 +18,8 @@ namespace ProjectSafeWayz.ViewModels
         public INavigationService _navigationService;
         public IPageDialogService _pageDialogService;
 
-        private UserDetails _person;
-        public UserDetails Person
+        private UsersModel _person;
+        public UsersModel Person
         {
             get { return _person; }
             set { SetProperty(ref _person, value); }
@@ -32,7 +32,7 @@ namespace ProjectSafeWayz.ViewModels
             _pageDialogService = pageDialogService;
             _navigationService = navigationService;
             Title = "Register";
-            Person = new UserDetails();
+            Person = new UsersModel();
         }
         private DelegateCommand _uriCommand;
         public DelegateCommand UriCommand =>

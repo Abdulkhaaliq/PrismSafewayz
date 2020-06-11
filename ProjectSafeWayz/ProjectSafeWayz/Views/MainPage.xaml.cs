@@ -46,39 +46,7 @@ namespace ProjectSafeWayz.Views
             }
         }
 
-        private async void myMap_MapClicked(object sender, MapClickedEventArgs e)
-        {
-            Geocoder geoCoder = new Geocoder();
-            Position posi = e.Position;
-            IEnumerable<string> possibleAddresses = await geoCoder.GetAddressesForPositionAsync(posi);
-            string address = possibleAddresses.FirstOrDefault();
-
-            Pin pin = new Pin
-            {
-                Label = "Location",
-                Address = address,
-                Type = PinType.Place,
-                Position = new Position(posi.Latitude, posi.Longitude)
-            };
-            myMap.Pins.Clear();
-            myMap.Pins.Add(pin);
-
-
-            var response = await DisplayAlert("Is this the location?", address, "OK", "CANCEL");
-
-            if (response == true)
-            {
-
-               // await Navigation.PushAsync(new ReportHerePage(address));
-                myMap.Pins.Clear();
-            }
-            else
-            {
-                myMap.Pins.Clear();
-            }
-        }
-
-        private async void Button_Clicked_1(object sender, EventArgs e)
+        private async void Button_Clicked(object sender, EventArgs e)
         {
             var pos = myMap.VisibleRegion.Center;
             var placemarks = await Geocoding.GetPlacemarksAsync(pos.Latitude, pos.Longitude);
@@ -86,15 +54,15 @@ namespace ProjectSafeWayz.Views
             var placemark = placemarks?.FirstOrDefault();
             if (placemark != null)
             {
-                bool location = await DisplayAlert("This location?", $"{placemark.FeatureName} {placemark.Thoroughfare} {placemark.SubAdminArea}", "No", "Yes");
-                if(location == true)
+                bool location = await DisplayAlert("Is this the correct location?", $"{placemark.FeatureName} {placemark.Thoroughfare} {placemark.SubAdminArea}", "Yes", "No");
+                if (location == true)
                 {
-
+                    await Navigation.PushAsync(new PostIncidentPage(pos.Latitude, pos.Longitude));
                 }
-                else
-                {
-
-                }
+            }
+            else
+            {
+                return;
             }
         }
     }

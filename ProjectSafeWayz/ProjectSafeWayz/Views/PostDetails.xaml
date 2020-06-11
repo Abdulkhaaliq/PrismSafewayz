@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:prism="http://prismlibrary.com" xmlns:converters="clr-namespace:ProjectSafeWayz.Converters"   
-             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps" xmlns:controls="clr-namespace:ProjectSafeWayz.Behavoiurs"
              prism:ViewModelLocator.AutowireViewModel="True"
              x:Class="ProjectSafeWayz.Views.PostDetails"
              Title="{Binding Title}">
@@ -17,9 +17,7 @@
         <ScrollView>
             <StackLayout>
                 <StackLayout HeightRequest="210">
-                    <maps:Map x:Name="map">
-                       
-                    </maps:Map>
+                    <controls:MapComponent x:Name="myMap"/>
                 </StackLayout>
                 <StackLayout>
                     <Grid>
@@ -40,7 +38,7 @@
                     <Grid>
                         <ImageButton Source="ReportPost.png" BackgroundColor="Transparent" Clicked="ImageButton_Clicked" />
                         <ImageButton Source="LikePost.png" BackgroundColor="Transparent" Grid.Column="2" Clicked="ImageButton_Clicked_1"/>
-                        <Label x:Name="MyVote" Text="0"/>
+                        <Label x:Name="MyVote" Text="0" Grid.Column="3" Margin="-30,10,0,0"/>
                     </Grid>
 
                 </StackLayout>

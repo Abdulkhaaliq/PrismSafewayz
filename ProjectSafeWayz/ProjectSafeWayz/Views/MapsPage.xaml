@@ -20,6 +20,27 @@
             <maps:Map x:Name="map"
                  
                       IsShowingUser="True">
+                <maps:Map.MapElements>
+                    <maps:Circle StrokeColor="Purple"
+                           StrokeWidth="4"
+                           FillColor="#88FFC0CB">
+                        <maps:Circle.Center>
+                            <maps:Position>
+                                <x:Arguments>
+                                    <x:Double>-34.040055</x:Double>
+                                    <x:Double>18.510534</x:Double>
+                                </x:Arguments>
+                            </maps:Position>
+                        </maps:Circle.Center>
+                        <maps:Circle.Radius>
+                            <maps:Distance>
+                                <x:Arguments>
+                                    <x:Double>50</x:Double>
+                                </x:Arguments>
+                            </maps:Distance>
+                        </maps:Circle.Radius>
+                    </maps:Circle>
+                </maps:Map.MapElements>
             </maps:Map>
 
 

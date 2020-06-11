@@ -21,7 +21,7 @@
                 
                 <StackLayout>
                     <Frame BorderColor="Black" BackgroundColor="Transparent" CornerRadius="70" HeightRequest="20" Margin="20">
-                        <SearchBar BackgroundColor="Transparent" SearchCommand="{Binding SearchCommand}" TextChanged="ReportListView_TextChanged"  Placeholder="Search by Incident" x:Name="ReportListView" />
+                        <SearchBar BackgroundColor="Transparent" SearchCommand="{Binding SearchCommand}" TextChanged="ReportListView_TextChanged"  Placeholder="Search by Area" x:Name="ReportListView" />
                     </Frame>
                     <Grid>
 

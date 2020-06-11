@@ -38,10 +38,10 @@ namespace ProjectSafeWayz.ViewModels
             Incidents = new ObservableCollection<TimelineModel>
             {
                 new TimelineModel { IncidentType = IncidentNames.Accident, Area = "Grassy Park", IncidentDescription = "Car hit a robot in the heap of traffic because of a taxi that lost a wheel in the middle of the road.", TimeOfIncident = DateTime.Now, Image = null, CreatedBy = "Anonymous", Latitude = -34.040055, Longitude = 18.510534},
-                new TimelineModel { IncidentType = IncidentNames.Shooting, Area = "Plumstead", IncidentDescription = "Shoot out by a local shop", TimeOfIncident = DateTime.Now, Image = null, CreatedBy = "Anonymous", Latitude = 13.03948, Longitude = 19.39485},
-                new TimelineModel { IncidentType = IncidentNames.Murder, Area = "Mananberg", IncidentDescription = "Man was shot and killed", TimeOfIncident = DateTime.Now, Image = null, CreatedBy = "Anonymous", Latitude = 13.03948, Longitude = 19.39485},
-                new TimelineModel { IncidentType = IncidentNames.Robbery, Area = "Wynberg", IncidentDescription = "local shop looted", TimeOfIncident = DateTime.Now, Image = null, CreatedBy = "Anonymous", Latitude = 13.03948, Longitude = 19.39485},
-                new TimelineModel { IncidentType = IncidentNames.Assault, Area = "Kenilworth", IncidentDescription = "Assault by a local shop", TimeOfIncident = DateTime.Now, Image = null, CreatedBy = "Anonymous", Latitude = 13.03948, Longitude = 19.39485}
+                new TimelineModel { IncidentType = IncidentNames.Shooting, Area = "Plumstead", IncidentDescription = "Shoot out by a local shop", TimeOfIncident = DateTime.Now, Image = null, CreatedBy = "Anonymous", Latitude = -34.017006, Longitude = 18.464242},
+                new TimelineModel { IncidentType = IncidentNames.Murder, Area = "Mananberg", IncidentDescription = "Man was shot and killed", TimeOfIncident = DateTime.Now, Image = null, CreatedBy = "Anonymous", Latitude = -33.986070, Longitude = 18.555707},
+                new TimelineModel { IncidentType = IncidentNames.Robbery, Area = "Wynberg", IncidentDescription = "local shop looted", TimeOfIncident = DateTime.Now, Image = null, CreatedBy = "Anonymous", Latitude = -34.009938, Longitude = 18.465597},
+                new TimelineModel { IncidentType = IncidentNames.Assault, Area = "Kenilworth", IncidentDescription = "Assault by a local shop", TimeOfIncident = DateTime.Now, Image = null, CreatedBy = "Anonymous", Latitude = -33.992745, Longitude = 18.475499}
             };
         }
 
@@ -51,34 +51,34 @@ namespace ProjectSafeWayz.ViewModels
 
         async void ExecuteFilterCommand()
         {
-            await _navigationService.NavigateAsync("PostIncidentPage");
+            await _navigationService.NavigateAsync("MainPage");
         }
 
      
-        public async void OnAppearing()
+        public void OnAppearing()
         {
-            try
-            {
-                var current = Connectivity.NetworkAccess;
+            /*try
+             {
+                 var current = Connectivity.NetworkAccess;
 
-                if (current == NetworkAccess.Internet)
-                {
-                    // Connection to internet is available
-                    var stats = await ApiServices.GetIncidentReport();
-                    ReportData = stats;
-                }
-                else
-                {
-                    if (current != NetworkAccess.Internet)
-                    {
-                        await _pageDialogService.DisplayAlertAsync("Unexpected Error", "No Interent access", "cancel", "ok");
-                    }
-                }
-            }
-            catch (Exception)
-            {
-               
-            }
+                 if (current == NetworkAccess.Internet)
+                 {
+                     // Connection to internet is available
+                     var stats = await ApiServices.GetIncidentReport();
+                     ReportData = stats;
+                 }
+                 else
+                 {
+                     if (current != NetworkAccess.Internet)
+                     {
+                         await _pageDialogService.DisplayAlertAsync("Unexpected Error", "No Interent access", "cancel", "ok");
+                     }
+                 }
+             }
+             catch (Exception)
+             {
+
+             }*/
         }
 
         public void OnDisappearing()

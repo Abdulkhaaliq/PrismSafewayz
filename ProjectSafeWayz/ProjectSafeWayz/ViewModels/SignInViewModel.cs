@@ -19,8 +19,8 @@ namespace ProjectSafeWayz.ViewModels
         public IEventAggregator _eventAggregator;
         public ISecurityService _securityService;
 
-        private UserDetails _person;
-        public UserDetails Person
+        private UsersModel _person;
+        public UsersModel Person
         {
             get { return _person; }
             set { SetProperty(ref _person, value); }
@@ -34,7 +34,7 @@ namespace ProjectSafeWayz.ViewModels
             _pageDialogService = pageDialogService;
             _navigationService = navigationService;
             Title = "Login";
-            Person = new UserDetails();
+            Person = new UsersModel();
 
         }
 
